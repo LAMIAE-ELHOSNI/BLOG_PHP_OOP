@@ -1,5 +1,9 @@
 <?php
-
+ob_start();
+include "../lip/session.php";
+?>
+<?php 
+Session::checksession();
 ?>
 <!doctype html>
 <html lang="en">   
@@ -277,8 +281,12 @@
                                 <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15">Marcus</span>
                                 <i class="uil-angle-down d-none d-xl-inline-block font-size-15"></i>
                             </button>
+                            <?php
+                                if(isset($_GET['action'])&&$_GET['action']=='logout'){
+                                    Session::destroy();
+                                }
+                            ?>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <!-- item-->
                                 <a class="dropdown-item" href="#"><i class="uil uil-user-circle font-size-18 align-middle text-muted me-1"></i> <span class="align-middle">View Profile</span></a>
                                <a class="dropdown-item" href="?action=logout"><i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Sign out</span></a>
                             </div>

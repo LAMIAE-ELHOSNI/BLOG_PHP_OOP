@@ -2,6 +2,7 @@
 include "../lip/database.php";
 include "../helpers/Format.php";
 include "../lip/session.php";
+Session::logincheck();
 class login{
     private $db;
     private $fr;

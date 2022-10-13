@@ -20,8 +20,6 @@ class register{
         //     $mail = new PHPMailer(true);
         //     $mail->isSMTP();
         //     $mail->SMTPAuth   = true;  
-
-
         // }
       $name=$this->fr->validation($data['name']);
       $email=$this->fr->validation($data['email']);
@@ -29,7 +27,7 @@ class register{
       $password=$this->fr->validation($data['password']);
       $v_token=md5(rand());
         if(empty($name)||empty($email)||empty($phone)||empty($password)){
-            $error="filed must not to be empty";
+            $error="filed must not be empty";
             return $error;
         }else{
             $e_query="select * from admin where email='$email'";

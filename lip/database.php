@@ -21,7 +21,7 @@ include "../config/config.php";
         //query select 
         public function select($query){
             $result=mysqli_query($this->link,$query) or die($this->link->error.__LINE__);
-            if(mysqli_fetch_assoc($result)>0){
+            if($result){
                 return $result;
             }else{
                 return false;
