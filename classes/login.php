@@ -1,11 +1,11 @@
 <?php
-include "../lip/database.php";
-include "../helpers/Format.php";
-include "../lip/session.php";
+include_once "../lip/database.php";
+include_once "../helpers/Format.php";
+include_once "../lip/session.php";
 Session::logincheck();
 class login{
-    private $db;
-    private $fr;
+    public $db;
+    public $fr;
     public function __construct()
     {
         $this->db=new Database;
@@ -24,7 +24,7 @@ class login{
             $row=mysqli_fetch_assoc($result);
             // if($row['v_status']=1){ until activate php
                 Session::set('login',true);
-                Session::set('adminname',$row['admin_name']);
+                Session::set('admin_id',$row['id']);
                 header("Location:index.php");
             // }else{
             //     $error_message="varifi your email first please";
@@ -37,3 +37,4 @@ class login{
     }
 }
 ?>
+

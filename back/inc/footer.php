@@ -1,17 +1,16 @@
 <footer class="footer">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Minible.
+                            <div class="col-sm-6" style="margin-top: 4%;">
+                                <script>document.write(new Date().getFullYear())</script> © .admin
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-end d-none d-sm-block">
-                                    Crafted with <i class="mdi mdi-heart text-danger"></i> by <a href="https://themesbrand.com/" target="_blank" class="text-reset">Themesbrand</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </footer>
+</footer>
             </div>
             <!-- end main content-->
 
@@ -79,7 +78,6 @@
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
-
         <!-- JAVASCRIPT -->
         <script src="assets/libs/jquery/jquery.min.js"></script>
         <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>

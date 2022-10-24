@@ -1,6 +1,6 @@
 <?php
-include "../lip/database.php";
-include "../helpers/Format.php";
+include_once "../lip/database.php";
+include_once "../helpers/Format.php";
 class Category{
     public $db;
     public $fr;
@@ -37,7 +37,6 @@ public function selectCategory(){
     $query_select="SELECT * FROM category";
     $result_select=$this->db->select($query_select);
      return $result_select;
-
 }
 public function updatecategory($id,$name){
     $name=$this->fr->validation($name);

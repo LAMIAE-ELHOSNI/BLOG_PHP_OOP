@@ -4,7 +4,7 @@
 
     <!-- LOGO -->
     <div class="navbar-brand-box">
-        <a href="index.html" class="logo logo-dark">
+        <a href="index.php" class="logo logo-dark">
             <span class="logo-sm">
                 <img src="assets/images/logo-sm.png" alt="" height="22">
             </span>
@@ -13,7 +13,7 @@
             </span>
         </a>
 
-        <a href="index.html" class="logo logo-light">
+        <a href="index.php" class="logo logo-light">
             <span class="logo-sm">
                 <img src="assets/images/logo-sm.png" alt="" height="22">
             </span>
@@ -62,7 +62,7 @@
                     <ul class="sub-menu" aria-expanded="true">
                         <li>
                             <a href="./add_post.php">Add Post</a>
-                            <a href="./manage_category.php" >Manage Posts</a>
+                            <a href="./manage_post.php" >Manage Posts</a>
                             
                         </li>
                     </ul>

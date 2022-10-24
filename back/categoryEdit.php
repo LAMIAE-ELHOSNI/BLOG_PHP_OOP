@@ -11,7 +11,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $name=$_POST['category'];
     $res=$category->updatecategory($id,$name);
 }
-
 ?>
 <div class="main-content w-50 p-3">
 <div class="page-content">

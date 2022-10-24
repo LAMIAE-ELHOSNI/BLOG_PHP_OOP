@@ -1,3 +1,8 @@
+<?php
+include_once "../classes/category.php";
+$category=new Category;
+$cat_name=$category->selectCategory();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -48,7 +53,7 @@
           <div class="row pt-5">
             <div class="col-12 text-center">
               <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
-              <h1 class="site-logo"><a href="index.html">Wordify</a></h1>
+              <h1 class="site-logo"><a href="index.html">MY BLOG</a></h1>
             </div>
           </div>
         </div>
@@ -62,19 +67,21 @@
                 <li class="nav-item">
                   <a class="nav-link active" href="index.php">Home</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="#">Business</a>
-                </li>
+                </li> -->
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Travel</a>
+                  <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
                   <div class="dropdown-menu" aria-labelledby="dropdown04">
-                    <a class="dropdown-item" href="category.html">Asia</a>
+                    <?php while($row=mysqli_fetch_assoc($cat_name)){?>
+                    <a class="dropdown-item" href="category.html"><?php echo $row['name'];?></a>
+                    <?php }?>
                   </div>
 
                 </li>
 
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="category.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                  <a class="nav-link dropdown-toggle" href="category.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tags</a>
                   <div class="dropdown-menu" aria-labelledby="dropdown05">
                     <a class="dropdown-item" href="category.html">Lifestyle</a>
                 </li>
